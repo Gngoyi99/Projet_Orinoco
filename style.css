@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+}
+#ProduitDispo{
+    
+}
+.Product{
+    height: 500px;
+}
+
+.Selection1{
+    width: 400px;
+    border: 2px black solid ;
+    border-radius: 25px;
+    text-align: center;
+    background-color: rgb(173, 102, 102);
+}
+img{
+    width: 400px;
+    border-radius: 25px 25px 0px 0px;
+}
