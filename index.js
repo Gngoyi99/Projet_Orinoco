@@ -32,7 +32,7 @@ let div = document.createElement('div');
 div.classList.add('Product');
 document.getElementById('ProduitDispo').appendChild(div)  
 
-div.innerHTML = `<img src="/Images/teddy_1.jpg" alt="ours en peluche"/>
+div.innerHTML = `<img src="Images/teddy_1.jpg" alt="ours en peluche"/>
 <br/>Teddy: ${teddyName}
 <br/>Color: ${teddyColor} 
 <br/>${teddyPrice}
