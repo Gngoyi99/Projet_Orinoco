@@ -10,56 +10,78 @@ let div = document.createElement("div");
 
 document.getElementById("ProduitDispo").appendChild(div);**/
 
-let teddy = {
-    image:'teddy_1.jpg',
+const teddies = 
+[ 
+    {
+    imageUrl:'teddy_1.jpg',
     name: 'Nobert',
-    color: 'Tan, Chocolate, Black, White',
+    _id: '5be9c8541c9d440000665243',
+    colors: ['Tan, Chocolate, Black, White'],
     price: 2900,
-  };
-  let teddy1 = {
-    image:'teddy_2.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+   },
+   {
+    imageUrl:'teddy_2.jpg',
     name: 'Arnold',
-    color: 'Pale brown,Dark brown,White',
+    _id: '5beaa8bf1c9d440000a57d94',
+    colors: ['Pale brown,Dark brown,White'],
     price: 3900,
-  };
-  let teddy2 = {
-    image:'teddy_3.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+   },
+   {
+    imageUrl:'teddy_3.jpg',
     name: 'Lenny and Carl',
-    color: 'Brown',
+    _id: '5beaaa8f1c9d440000a57d95',
+    colors: ['Brown'],
     price: 5900,
-  };
-  let teddy3 = {
-    image:'teddy_4.jpg',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+   },
+   {
+    imageUrl:'teddy_4.jpg',
     name: 'Gustav',
-    color: 'Brown, Blue, Pink',
+    _id: '5beaabe91c9d440000a57d96',
+    colors: ['Brown, Blue, Pink'],
     price: 4500,
-  };
-  let teddy4 = {
-    image:'teddy_5.jpg',   
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+   },
+   {
+    imageUrl:'teddy_5.jpg',   
     name: 'Garfunkel',
-    color: 'Beige, Tan, Chocolate',
+    _id: '5beaacd41c9d440000a57d97',
+    colors: ['Beige, Tan, Chocolate'],
     price: 5500,
-  };  
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+   }
+]
+for (let i in teddies){
+    console.log("article" + [i])
+}
+;  
  
-function CreationProduit(teddyImage,teddyName,teddyColor,teddyPrice){
- 
+
+
+function CreationProduit(teddiesImageUrl,teddiesName,teddies_Id,teddiesColors,teddiesDescription,teddiesPrice){
+
 let div = document.createElement('div');
 div.classList.add('Product');
 document.getElementById('ProduitDispo').appendChild(div)  
 
-div.innerHTML = `<img src="Images/${teddyImage}" alt="ours en peluche"/>
-<br/>Teddy: ${teddyName}
-<br/>Color: ${teddyColor} 
-<br/>${teddyPrice}
+div.innerHTML = `<img src="Images/${teddiesImageUrl}" alt="ours en peluche"/>
+<br/>Teddy: ${teddiesName}
+<br/>${teddies_Id}
+<br/>Color: ${teddiesColors}
+<br/>${teddiesDescription}
+<br/>${teddiesPrice}
 <br/><button>Voir le produit</button>`;
 
 
+
 }
-CreationProduit(teddy.image,teddy.name,teddy.color,teddy.price);
-CreationProduit(teddy1.image,teddy1.name,teddy1.color,teddy1.price);
-CreationProduit(teddy2.image,teddy2.name,teddy2.color,teddy2.price);
-CreationProduit(teddy3.image,teddy3.name,teddy3.color,teddy3.price);
-CreationProduit(teddy4.image,teddy4.name,teddy4.color,teddy4.price);
+CreationProduit(teddies[0].imageUrl,teddies[0].name,teddies[0]._id,teddies[0].colors,teddies[0].description,teddies[0].price);
+CreationProduit(teddies[1].imageUrl,teddies[1].name,teddies[1]._id,teddies[1].colors,teddies[1].description,teddies[1].price);
+CreationProduit(teddies[2].imageUrl,teddies[2].name,teddies[2]._id,teddies[2].colors,teddies[2].description,teddies[2].price);
+
+
 
 fetch("https://raw.githubusercontent.com/OpenClassrooms-Student-Center/JWDP5/master/models/Teddy.js")
 .then(function(res) {
@@ -73,6 +95,8 @@ fetch("https://raw.githubusercontent.com/OpenClassrooms-Student-Center/JWDP5/mas
   .catch(function(err) {
       //une erreur est survenue
   });
+
+  
 
 
 
