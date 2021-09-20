@@ -79,7 +79,8 @@ div.innerHTML = `<img src="Images/${teddiesImageUrl}" alt="ours en peluche"/>
 CreationProduit(teddies[0].imageUrl,teddies[0].name,teddies[0]._id,teddies[0].colors,teddies[0].description,teddies[0].price);
 CreationProduit(teddies[1].imageUrl,teddies[1].name,teddies[1]._id,teddies[1].colors,teddies[1].description,teddies[1].price);
 CreationProduit(teddies[2].imageUrl,teddies[2].name,teddies[2]._id,teddies[2].colors,teddies[2].description,teddies[2].price);
-
+CreationProduit(teddies[3].imageUrl,teddies[3].name,teddies[3]._id,teddies[3].colors,teddies[3].description,teddies[3].price);
+CreationProduit(teddies[4].imageUrl,teddies[4].name,teddies[4]._id,teddies[4].colors,teddies[4].description,teddies[4].price);
 
 
 fetch("https://raw.githubusercontent.com/OpenClassrooms-Student-Center/JWDP5/master/models/Teddy.js")
