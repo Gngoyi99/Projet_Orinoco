@@ -54,8 +54,7 @@ const teddies =
    }
 ]
 for (let i in teddies){
-    console.log("article" + [i])
-}
+ console.log(teddies[i].name)}
 ;  
  
 
