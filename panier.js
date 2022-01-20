@@ -1,12 +1,12 @@
-let products = JSON.parse(localStorage.getItem("produit"));
+let products = JSON.parse(localStorage.getItem("products"));
         console.log(products);
 
         ////Ajout de produit dans le Localstorage
         const AjoutProduitLocalStorage = () => {products.push(optionsProduit);
-            localStorage.setItem('produit', JSON.stringify(products));
+            localStorage.setItem('products', JSON.stringify(products));
             console.log(products);} 
 
-//----------------------------------------------AFFICHAGE panier -----------------------
+//----------------------------------------------AFFICHAGE panier-----------------------
 
 const Panier = document.querySelector('.ArticleChoix');
 
@@ -53,12 +53,12 @@ let btnSupprimer = document.getElementsByClassName("btnSupprimer");
     products = products.filter( el => el.color !== id_supprimer);
     console.log(products);
     
-    localStorage.setItem('produit', JSON.stringify(products));
+    localStorage.setItem('products', JSON.stringify(products));
 
     alert("Produit supprimé");
     window.location.href = "panier.html"
 
-    }) ; 
+    }) ;    
 }
 
            
@@ -98,7 +98,7 @@ console.log("c'est vide")
 
     BtnViderPanier.addEventListener("click", (event)=>{
     event.preventDefault;
-    localStorage.removeItem("produit");
+    localStorage.removeItem("products");
 
     ////alert("Le panier a été vidé");
 
@@ -146,17 +146,19 @@ console.log(BtnEnvoyerFormulaire);
 
 BtnEnvoyerFormulaire.addEventListener("click",(event)=>{
     event.preventDefault();
-    ////objet Fo rmulaire
+    ////objet Formulaire
     const contact = {
-        firstName:document.querySelector("#firstName").value,
-        lastName:document.querySelector("#lastName").value,
-        address:document.querySelector("#address").value,
-        city:document.querySelector("#city").value,
-        email:document.querySelector("#email").value,
+        firstName: document.querySelector("#firstName").value,
+        lastName: document.querySelector("#lastName").value,
+        address: document.querySelector("#address").value,
+        city: document.querySelector("#city").value,
+        email: document.querySelector("#email").value,
     
     };
     console.log(contact);
-    
+////je récupère l'id que j'envois au serveur////
+    const productId = products.map((products)=>products.id);
+    console.log(productId);
 
     /////////////////////////////////Validation formulaire////////////
 
@@ -248,20 +250,21 @@ BtnEnvoyerFormulaire.addEventListener("click",(event)=>{
             (textAlert2("Email"));
             return false
         };
+
     }
 
     if (FirstnameControle() && LastnameControle() && CityControle() && AdressControle() && EmailControle()){
 
         localStorage.setItem('contact', JSON.stringify(contact));
         
+        
         }else{
             //alert("Les champs doivent être correctement remplis")
         }
-        ////Mettre les information dans le localStorage
         
         ////objet à envoyer au serveur
             const EnvoisVersServeur = {
-                products,
+                productId,
                 contact,
                 
             }
@@ -269,7 +272,7 @@ BtnEnvoyerFormulaire.addEventListener("click",(event)=>{
             //console.log(EnvoisVersServeur);
         ////Envoi des objets au serveur
 
-        const promise = fetch("http://localhost:3000/api/teddies/order", {
+        const promise = fetch('http://localhost:3000/api/teddies/order', {
             method: "POST",
             body: JSON.stringify(EnvoisVersServeur),
             headers:{
@@ -302,6 +305,7 @@ BtnEnvoyerFormulaire.addEventListener("click",(event)=>{
         
         ///Valeur enregistré dans le formulaire
         const ContactEnregistrer = {
+
             firstName:document.querySelector("#firstName").setAttribute('value' , dataLocalStorageObjet.firstName),
             lastName:document.querySelector("#lastName").setAttribute('value' , dataLocalStorageObjet.lastName),
             address:document.querySelector("#address").setAttribute('value' , dataLocalStorageObjet.address),
@@ -313,3 +317,5 @@ BtnEnvoyerFormulaire.addEventListener("click",(event)=>{
 
 
 })
+
+
