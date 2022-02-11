@@ -1,25 +1,328 @@
-header{
-    display: flex;
-    justify-content: center;
-    background-color: grey;
+body {
+  background-color: #a8a89e;
+  margin: 0;
 }
-#ProduitDispo{
-    
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #777772;
 }
-.Product{
-    padding: 20px;
-    border: 2px solid black;
-    font-size: 20px;
-    text-align: center;
+.Page-Acceuil {
+  background-image: url(/orinoco-frontend/Images/GettyImages-500047521-338ffb2c4ee84ca39042054dfd74a4d1.jpg);
+  padding-bottom: 70px;
+}
+a {
+  text-decoration: none;
 }
 
-.Selection1{
-    width: 400px;
-    border: 2px black solid ;
-    border-radius: 25px;
-    text-align: center;
-    background-color: rgb(173, 102, 102);
+img {
+  width: 250px;
+  padding: 10px;
 }
-img{
-    width: 400px;
+.Nom {
+  text-align: center;
+}
+.Nom a {
+  font-size: 55px;
+  color: #ca7842;
+  font-family: Courier;
+  border-bottom: #3d484a solid 5px;
+  border-top: #3d484a solid 5px;
+  text-align: center;
+}
+.Panier a {
+  color: #000000;
+  border-left: #000000 solid 5px;
+  font-family: American Typewriter;
+}
+.Panier i {
+  font-size: 40px;
+  color: #ca7842;
+}
+.Ours-presentation {
+  width: 150px;
+}
+.Nom-presentation {
+  display: flex;
+  justify-content: space-between;
+}
+.text2 {
+  color: #000000;
+  font-size: 35px;
+  font-family: American Typewriter;
+}
+#ProduitDispo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Product {
+  border: 2px solid black;
+  border-radius: 25px;
+  font-size: 20px;
+  text-align: center;
+  width: 300px;
+  background-color: #e0e0e0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.Titre-Ours {
+  margin: 0px;
+  font-size: 30px;
+  color: #4f4c4a;
+  font-family: Courier;
+}
+
+.Titre-Couleur {
+  margin: 0px;
+  font-style: italic;
+  color: #000000;
+  font-size: 20px;
+  font-family: American Typewriter;
+  background-color: #ca7842;
+}
+
+.Titre-Prix {
+  margin: 0px;
+  font-size: 30px;
+  color: #ca7842;
+  font-family: "Courier New", Courier, monospace;
+}
+.img-montagne {
+  width: 200px;
+}
+.img-montagne2 {
+  width: 100%;
+  padding: 0px;
+}
+/******************************************PAGE PRODUIT*******************************************/
+
+#SelectionProduct {
+  display: flex;
+}
+.img-PageProduit {
+  width: 500px;
+  padding-right: 5px;
+}
+.selection {
+  display: flex;
+  justify-content: flex-end;
+}
+.retour a {
+  color: #000000;
+  font-family: American Typewriter;
+  border-bottom: #000000 solid 5px;
+}
+.retour i {
+  font-size: 40px;
+  color: #ca7842;
+  margin-right: 5px;
+}
+
+.Panier2 {
+  display: flex;
+  justify-content: end;
+}
+.Panier2 a {
+  color: #000000;
+  border-left: #000000 solid 5px;
+  font-family: American Typewriter;
+  border-bottom: #000000 solid 5px;
+}
+.Panier2 i {
+  font-size: 40px;
+  color: #ca7842;
+}
+.Ours-PageProduit {
+  font-size: 35px;
+  margin: 0px;
+  color: #4f4c4a;
+  font-family: Courier;
+}
+.Description-PageProduit {
+  font-style: italic;
+  margin: 0px;
+  font-weight: normal;
+  font-family: American Typewriter;
+  background-color: #ca7842;
+}
+.Id-PageProduit {
+  font-family: American Typewriter;
+}
+form label {
+  font-size: 25px;
+  font-family: American Typewriter;
+}
+.Prix-PageProduit {
+  font-size: 35px;
+  color: #ca7842;
+  font-family: "Courier New", Courier, monospace;
+}
+#btn_AjouterPanier {
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: #ca7842;
+  font-family: "Courier New", Courier, monospace;
+  transition: transform 450ms, background-color 300ms 150ms;
+}
+#btn_AjouterPanier:active {
+  transform: scale(0);
+  background-color: greenyellow;
+}
+
+/******************************************PAGE PANIER*******************************************/
+.PagePanier {
+  background-image: url(/orinoco-frontend/Images/bear\ copie.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+.Presentation-PagePanier {
+  text-align: center;
+  text-decoration-line: underline;
+}
+
+.Presentation2-PagePanier {
+  text-decoration-line: underline;
+  font-family: American Typewriter;
+}
+
+.btnSupprimer {
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: #ca7842;
+  font-family: Courier;
+}
+.ViderPanier {
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: #ca7842;
+  font-family: Courier;
+}
+strong {
+  font-size: 20px;
+  color: black;
+  font-family: Courier;
+}
+.AffichagePanier {
+  display: flex;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.AffichageFormulaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  padding-left: 10px;
+  font-family: American Typewriter;
+}
+
+.AffichageFormulaire input {
+  margin-bottom: 20px;
+  font-size: 15px;
+  border-radius: 25px;
+  height: 25px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f2f2f2;
+}
+.AffichageFormulaire label {
+  font-weight: bold;
+  font-size: 20px;
+}
+.BtnEnvoyerFormulaire {
+  padding: 15px;
+  margin: 15px;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: #ca7842;
+  font-family: Courier;
+  font-size: 20px;
+  transition: transform 450ms, background-color 300ms 150ms;
+}
+.BtnEnvoyerFormulaire:active {
+  transform: scale(0);
+  background-color: greenyellow;
+}
+footer {
+  background-color: #777772;
+  font-size: 20px;
+  padding: 10px;
+  color: black;
+  font-family: American Typewriter;
+  display: flex;
+  justify-content: space-between;
+}
+footer img {
+  height: 200px;
+  width: 350px;
+}
+.information__texte a {
+  color: black;
+  text-decoration: none;
+}
+.information__texte:hover {
+  color: #d68e42;
+}
+/*************************PAGE DE COMMANDE********************/
+.Titre-Commande {
+  font-family: American Typewriter;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+}
+.AffichageCommande {
+  border: #3d484a solid 5px;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 95px;
+}
+#Commande-texte1 {
+  padding: 10px;
+}
+#Commande-texte1 strong {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/*******************MEDIA QUERIES*************************/
+@media screen and (min-width: 200px) and (max-width: 1011px) {
+  .img-montagne {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  #SelectionProduct {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 515px) {
+  .img-PageProduit {
+    width: 100%;
+    padding: 0px;
+  }
+  .Id-PageProduit {
+    font-size: 100%;
+  }
+}
+@media screen and (max-width: 309px) {
+  .AffichageFormulaire {
+    width: 265px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img {
+    padding: 0px;
+  }
 }
