@@ -61,6 +61,7 @@ for (let k = 0; k < btnSupprimer.length; k++) {
     localStorage.setItem("products", JSON.stringify(products));
 
     alert("Produit supprimé");
+    window.location.href = "panier.html";
   });
 }
 
