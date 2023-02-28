@@ -1,0 +1,21 @@
+Ce Projet est à télécharger car il faut faire fonctionner le Back de ce projet pour qu'il puisse s'ouvrir correctement!
+
+# Orinoco #
+
+This is the back end server for Project 5 of the Junior Web Developer path.
+
+### Prerequisites ###
+
+You will need to have Node and `npm` installed locally on your machine.
+
+### Installation ###
+
+Clone this repo. From within the project folder, run `npm install`. You 
+can then run the server with `node server`. 
+The server should run on `localhost` with default port `3000`. If the
+server runs on another port for any reason, this is printed to the
+console when the server starts, e.g. `Listening on port 3001`.
+
+### Commande ###
+1- Ouvrir le terminal
+2- Il faut se diriger vers le dossier orinoco Backend "cd orinoco-backend" puis une fois dans celui-ci éxécuter "npm start server.js".
